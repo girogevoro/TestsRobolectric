@@ -1,4 +1,4 @@
-package com.geekbrains.tests.view.search
+package com.geekbrains.tests.search
 
 import com.geekbrains.tests.model.SearchResult
 import com.geekbrains.tests.view.ViewContract
