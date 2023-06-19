@@ -2,8 +2,8 @@ package com.geekbrains.tests
 
 import com.geekbrains.tests.model.SearchResponse
 import com.geekbrains.tests.repository.GitHubApi
-import com.geekbrains.tests.repository.GitHubRepository
-import com.geekbrains.tests.repository.GitHubRepository.GitHubRepositoryCallback
+import com.geekbrains.tests.repository.GitHubRepositoryImpl
+import com.geekbrains.tests.repository.GitHubRepositoryImpl.GitHubRepositoryCallback
 import okhttp3.Request
 import okio.Timeout
 import org.junit.Before
@@ -17,7 +17,7 @@ import retrofit2.Response
 
 class GitHubRepositoryTest {
 
-    private lateinit var repository: GitHubRepository
+    private lateinit var repository: GitHubRepositoryImpl
 
     @Mock
     private lateinit var gitHubApi: GitHubApi
@@ -25,7 +25,7 @@ class GitHubRepositoryTest {
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        repository = GitHubRepository(gitHubApi)
+        repository = GitHubRepositoryImpl(gitHubApi)
     }
 
     @Test
